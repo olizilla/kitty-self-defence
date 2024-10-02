@@ -1,12 +1,12 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
 		<h2><a href="/">
-			<img src="/triangle.png" alt="" width="30" class="logo">{SITE_TITLE}
+			<img src="/triangle.png" alt="" width="30" class="logo">
+			<span class="title">Brixton <nobr>Self-Defence</nobr></span>
 		</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -35,12 +35,12 @@ import { SITE_TITLE } from '../consts';
 		margin: 0;
 		font-size: 1em;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
 	}
 	nav {
+		height: 71px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -63,9 +63,10 @@ import { SITE_TITLE } from '../consts';
 		vertical-align: -4px;
 		margin-right: 0.4em;
 	}
+	nav .internal-links {
+		display: none;
+	}
 	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
+
 	}
 </style>
